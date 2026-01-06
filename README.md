@@ -1,4 +1,6 @@
-# React  App 
+# React  App
+## Here is the live preview 
+   https://movie-assignment-coral.vercel.app/
 ## Setup Instructions
   ```bash
     Clone the repository with
@@ -7,6 +9,7 @@
     npm install
     npm start
 ```
+
 ## Explanation of Debounce Implementation
   ### Debounce Implementation
   The search functionality is implemented using a custom useDebounce hook. 
