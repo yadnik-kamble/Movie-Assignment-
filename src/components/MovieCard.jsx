@@ -4,15 +4,15 @@ const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       {poster ? (
-        <img src={poster} alt={title} />
+        <img src={poster} />
       ) : (
-        <div className="no-poster">No Poster Available</div>
+        <div className="no-poster">No Poster</div>
       )}
-
-      <h3>{title}</h3>
-      <p>Year: {year}</p>
-      <p>Rating: {rating}</p>
-      <p>Genre: {genre}</p>
+      <div className="movie-card-content">
+        <h3>{title}</h3>
+        <p>Year: {year}</p>
+        <span className="rating">rating ⭐ {rating}</span>
+      </div>
     </div>
   );
 };

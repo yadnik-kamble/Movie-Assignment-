@@ -1,40 +1,89 @@
+body {
+   background: linear-gradient(to right, #160c75, #7303c0, #ec38bc, #fdeff9);
+}
+
 .app {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 24px;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 input {
-  padding: 8px;
+  padding: 10px 26px;
   width: 260px;
-  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .movie-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
 }
 
 .movie-card {
-  border: 2px solid #8dcbff;
-  padding: 10px;
-  border-radius: 10px;
-  overflow: hidden;      
-  background: #fff;
-  box-shadow: 0px 0px 5px 0px rgb(66, 105, 131);
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12), 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .movie-card img {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: cover;
   display: block;
+  background: #000;
+}
+.movie-card-content {
+  padding: 16px;
+}
+
+.movie-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.movie-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #4b5563;
 }
 
 .no-poster {
-  height: 240px;
-  background: #eee;
+  height: 220px;
+  background: linear-gradient(135deg, #374767, #3664c1);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #000000;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rating {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.15);
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 13px;
 }
